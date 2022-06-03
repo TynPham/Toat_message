@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica Neue";
+    background-color: #f4f4f5;
+}
+body > div {
+    margin: auto;
+  }  
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    min-width: 120px;
+    transition: opacity 0.2s ease;
+  }
+  .btn--size-l {
+    padding: 16px 56px;
+  }
+  
+  .btn--size-s {
+    padding: 8px 32px;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  .btn + .btn {
+    margin-left: 16px;
+  }
+  
+  .btn--success {
+    background-color: #71be34;
+  }
+  
+  .btn--error {
+    background-color: #ff623d;
+  }
+  
+  .btn--danger {
+    background-color: #ffb702;
+  }
+  
+  .btn--disabled {
+    opacity: 0.5 !important;
+    cursor: default;
+  }
+  .btn--info {
+    background-color: #2186eb;
+  }
+  
+  
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+}
+.Toast {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 5px 8px rgba(0 , 0 , 0 , 0.1);
+    border-left: 4px solid;
+    margin-top: 20px;
+    min-width: 400px;
+    max-width: 500px;
+    transition: all linear 0.5s;
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes moan {
+    to {
+        opacity: 0;
+    }
+}
+.Toast:hover {
+    opacity: 0.8;
+}
+.icon {
+    font-size: 24px;
+}
+.close,
+.icon {
+    padding: 0 16px;
+}
+.bodys {
+    flex-grow: 1;
+}
+.title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+}
+.message {
+    font-size: 16px;
+    font-weight: 100;
+    color: #888;
+}
+.close {
+    font-size: 22px;
+    color: rgba(0 , 0 , 0 , 0.3);
+    cursor: pointer;
+}
+.success {
+  border-color: #47d864;
+}
+.success .icon {
+  color:#47d864;
+}
+.info {
+  border-color: #2186eb;
+}
+.info .icon {
+  color: #2186eb;
+}
+.warning {
+  border-color: #ffc021;
+}
+.warning .icon{
+  color: #ffc021;
+}
+.error {
+  border-color: #ff623d;
+}
+.error .icon {
+  color: #ff623d;
+}
